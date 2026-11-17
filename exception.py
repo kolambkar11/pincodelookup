@@ -22,7 +22,7 @@ async def pincode_not_found_handler(reqeust: Request, exe: PinCodeNotFoundError)
         content={
             "error": "pincode_not_found",
             "message": f"No location for pincode: {exe.pincdode}",
-            "pincode": exe.pincode
+            "pincode": exe.pincode,
         },
     )
 
@@ -33,6 +33,6 @@ async def invalid_pincode_handler(reqeust: Request, exe: PinCodeNotFoundError):
         content={
             "error": "invalid_pincode",
             "message": f"Pincode: {exe.pincdode} is invalid",
-            "pincode": exe.reason
+            "pincode": exe.reason,
         },
     )
